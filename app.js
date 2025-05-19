@@ -1,8 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const authRoutes = require('./routes/auth');
-const db = require('./config/db');
+const authRoutes = require('./routes/auth'); // ✅ Correct import
 
 // Middleware
 app.use(express.json());
@@ -10,13 +9,13 @@ app.use(express.json());
 // Routes
 app.use('/auth', authRoutes);
 
-// Home route
+// Test route
 app.get('/', (req, res) => {
   res.send('Nagarta Radio Backend is running.');
 });
 
-// Server
+// Start server
 const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`✅ Server is running on port ${PORT}`);
 });
