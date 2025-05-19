@@ -1,9 +1,24 @@
 {
   "name": "nagarta-radio-backend",
   "version": "1.0.0",
+  "description": "Backend API for Nagarta Radio platform, built with Express.js and PostgreSQL.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "express",
+    "api",
+    "radio",
+    "backend",
+    "postgresql"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/nagarta-radio-backend.git"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
@@ -11,5 +26,11 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
     "pg": "^8.11.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
